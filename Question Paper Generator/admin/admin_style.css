@@ -1,0 +1,209 @@
+/* General Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+}
+body.admin-login-body {
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+}
+
+/* Login Page Styles */
+.login-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    z-index: 1;
+    position: relative;
+}
+.login-form h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #333;
+}
+.input-group {
+    margin-bottom: 20px;
+}
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+.login-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #43a050;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+.login-form button:hover {
+    background-color: #3d8741;
+}
+
+/* Background Image Styling */
+.bg-image {
+  /* PATH FIXED: ../img/ to go up and into the img folder */
+  background-image: url('admin.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: blur(6px);
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+}
+
+/* Dashboard Styles */
+.dashboard-header {
+    background-color: #343a40;
+    color: #fff;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.dashboard-header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+.dashboard-header nav {
+    display: flex;
+    align-items: center;
+}
+.dashboard-header .header-link {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    margin-right: 15px;
+    border: 1px solid #fff;
+    transition: background-color 0.2s;
+}
+.dashboard-header .header-link:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+.dashboard-header .logout-link {
+    color: #fff;
+    text-decoration: none;
+    background-color: #dc3545;
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+.dashboard-container {
+    padding: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.dashboard-container h2 {
+    margin-top: 0;
+}
+.user-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+.user-table th, .user-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+.user-table th {
+    background-color: #f8f9fa;
+    font-weight: bold;
+}
+.user-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* For the form on the add_admin page */
+.form-container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    margin: 40px auto;
+}
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color: #31708f;
+    background-color: #d9edf7;
+    border-color: #bce8f1;
+}
+
+
+.delete-btn {
+    display: inline-block;
+    padding: 5px 10px;
+    font-size: 14px;
+    background-color: #dc3545; /* Red color for delete */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+.delete-btn:hover {
+    background-color: #c82333;
+    color: #fff;
+}
+/* --- Add this to the end of /admin/admin_style.css --- */
+
+/* This new container holds the input and the eye */
+.admin-password-container {
+    position: relative;
+    width: 100%;
+}
+
+/* This styles the password input field */
+.admin-password-container input {
+    /* These styles must match your other admin inputs */
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    
+    /* This adds space on the right for the eye */
+    padding-right: 45px; 
+}
+
+/* This styles and positions the eye icon */
+.admin-toggle-password {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    user-select: none;
+    font-size: 1.1rem;
+    opacity: 0.7;
+}
+.admin-toggle-password:hover {
+    opacity: 1;
+}

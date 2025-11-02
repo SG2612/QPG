@@ -1,0 +1,102 @@
+/* Styles for the generated paper page, especially for printing */
+body {
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1.5;
+    background-color: #fff;
+    color: #000;
+}
+
+.paper-container {
+    max-width: 8.5in;
+    margin: 30px auto;
+    padding: 1in;
+    border: 1px solid #ccc;
+    background: #fff;
+}
+
+.paper-header {
+    text-align: center;
+    border-bottom: 2px solid #000;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+.paper-header h1 {
+    font-size: 24px;
+    margin: 0;
+}
+.paper-header h2 {
+    font-size: 20px;
+    margin: 10px 0 0;
+    font-weight: normal;
+}
+.header-details {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    font-size: 16px;
+}
+.header-details strong {
+    font-weight: bold;
+}
+
+.instructions {
+    border: 1px dashed #666;
+    padding: 15px;
+    margin-bottom: 30px;
+    font-style: italic;
+}
+
+.question-list {
+    margin-top: 20px;
+}
+.question-item {
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.question-item p {
+    flex-grow: 1;
+    margin: 0;
+    padding-right: 20px;
+    font-size: 16px;
+}
+.question-item .marks {
+    font-weight: bold;
+    font-size: 16px;
+    min-width: 60px;
+    text-align: right;
+}
+
+.print-button {
+    display: block;
+    width: 200px;
+    margin: 30px auto;
+    padding: 15px;
+    background: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* Print-specific styles */
+@media print {
+    body {
+        margin: 0;
+        padding: 0;
+    }
+    .paper-container {
+        border: none;
+        box-shadow: none;
+        margin: 0;
+        padding: 0;
+        max-width: 100%;
+    }
+    .print-button {
+        display: none;
+    }
+}
